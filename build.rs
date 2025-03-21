@@ -11,7 +11,8 @@ fn main() {
       .file("src/native_titlebar.m")
       // If you’re using ARC in that .m file, add:
       .flag("-fobjc-arc")
-      .compile("native_titlebar");
+      .flag("-mmacosx-version-min=10.11")
+      .compile("native-titlebar");
 
 
   tauri_plugin::Builder::new(COMMANDS)
