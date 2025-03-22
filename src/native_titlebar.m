@@ -7,8 +7,7 @@ void setup_titlebar_buttons(NSWindow *nsWindow) {
     [nsWindow setTitlebarAppearsTransparent:YES];
     nsWindow.styleMask |= NSWindowStyleMaskFullSizeContentView;
 
-    // 2) Let the user drag the window by grabbing anywhere in the background.
-    [nsWindow setMovableByWindowBackground:YES];
+    [nsWindow setMovableByWindowBackground:NO];
 
     // 3) Access the window's content view (which now extends into the title bar area).
     NSView *contentView = [nsWindow contentView];
